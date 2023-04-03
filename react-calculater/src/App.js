@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import NumberFormat from "react-number-format";
+import { NumericFormat } from "react-number-format";
 
 function App() {
   const [preState, setPreState] = useState("");
@@ -88,13 +88,13 @@ function App() {
       <div className="wrapper">
         <div className="screen">
           {input !== "" || input === "0" ? (
-            <NumberFormat
+            <NumericFormat
               value={input}
               displayType={"text"}
               thousandSepartor={true}
             />
           ) : (
-            <NumberFormat
+            <NumericFormat
               value={preState}
               displayType={"text"}
               thousandSepartor={true}
